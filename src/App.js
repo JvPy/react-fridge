@@ -7,8 +7,8 @@ import './App.css'
 
 function App() {
   return(
-    <div className="row">
-      <Navbar/>
+    <div className="flex-column">
+      <Navbar />
       <Root />
       <Footer />
     </div>
