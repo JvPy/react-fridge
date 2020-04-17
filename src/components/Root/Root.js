@@ -3,7 +3,9 @@ import HumidityChart from '../HumidityChart/HumidityChart'
 
 const Root = () => {
     return (
-        <HumidityChart />
+        <React.Fragment>
+            <HumidityChart />
+        </React.Fragment>
     )
 }
 
