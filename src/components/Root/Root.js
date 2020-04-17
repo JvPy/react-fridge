@@ -1,7 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
+import HumidityChart from '../HumidityChart/HumidityChart'
 
-function Root() {
-    return "Root"
+const Root = () => {
+    return (
+        <HumidityChart />
+    )
 }
 
 export default Root;
