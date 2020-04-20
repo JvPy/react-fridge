@@ -1,0 +1,29 @@
+{
+    "plants": [
+        { 
+            "plant" : "Pepper",
+            "humidity" : 72,
+            "lights" : false
+        },
+        { 
+            "plant" : "Rosemary",
+            "humidity" : 33,
+            "lights" : false
+        },
+        { 
+            "plant" : "Oregano",
+            "humidity" : 98,
+            "lights" : false
+        },
+        { 
+            "plant" : "Thyme",
+            "humidity" : 12,
+            "lights" : false
+        },
+        { 
+            "plant" : "Parsely",
+            "humidity" : 44,
+            "lights" : false
+        }
+    ]
+}

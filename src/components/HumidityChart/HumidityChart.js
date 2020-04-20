@@ -1,9 +1,30 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Chart from 'chart.js';
 import Card from '../Card/Card'
+import "./HumidityChart.css"
+const chartData = require('../../messages/plants.json');
 
+// let chartRef = React.createRef();
 
-let chartRef = React.createRef();
+const handleChartLabels = () => {
+  let labels = [];
+
+  chartData.plants.map(x => {
+    labels.push(x.plant);
+  })
+
+  return labels;
+}
+
+const handleChartData = () => {
+  let dataset = [];
+
+  chartData.plants.map(x => {
+    dataset.push(x.humidity);
+  })
+
+  return dataset;
+}
 
 const chartConfig = {
     // type: 'polarArea',
@@ -31,12 +52,12 @@ const chartConfig = {
 
     type: 'bar',
     data: {
-      labels: ["Pepper", "Rosemary", "Oregano", "Thyme", "Parsely"],
+      labels: handleChartLabels(),
       datasets: [
         {
           label: "Humidity(millions)",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [72,33,98,12,44]
+          data: handleChartData()
         }
       ]
     },
@@ -56,10 +77,10 @@ const chartConfig = {
     }
 }
 
-function HumidityChart() {
+const HumidityChart = () => {
     const chartContainer = useRef(null);
     const [chartInstance, setChartInstance] = useState(null);
-  
+
     useEffect(() => {
       if (chartContainer && chartContainer.current) {
         const newChartInstance = new Chart(chartContainer.current, chartConfig);
