@@ -1,5 +1,6 @@
 {
-    "plant" : "plant",
-    "lights" : "lights",
-    "humidity" : "humidity"
+    "plant" : "Plant",
+    "lights" : "Lights",
+    "humidity" : "Humidity",
+    "lightControl" : "Light Control"
 }

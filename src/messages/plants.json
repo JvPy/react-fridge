@@ -1,29 +1,48 @@
 {
     "plants": [
         { 
+            "id" : 1,
             "plant" : "Pepper",
             "humidity" : 72,
-            "lights" : false
+            "lights" : false,
+            "lightsControl" : {
+                "lightsOn" : "19:00",
+                "lightsOff" : "22:00"
+            }
         },
         { 
+            "id" : 2,
             "plant" : "Rosemary",
             "humidity" : 33,
-            "lights" : false
+            "lights" : false,
+            "lightsControl" : {
+                "lightsOn" : "20:00",
+                "lightsOff" : "21:30"
+            }
         },
         { 
+            "id" : 3,
             "plant" : "Oregano",
             "humidity" : 98,
-            "lights" : false
+            "lights" : false,
+            "lightsControl" : false
         },
         { 
+            "id" : 4,
             "plant" : "Thyme",
             "humidity" : 12,
-            "lights" : false
+            "lights" : false,
+            "lightsControl" : {
+                "lightsOn" : "19:00",
+                "lightsOff" : "20:00"
+            }
         },
         { 
+            "id" : 5,
             "plant" : "Parsely",
             "humidity" : 44,
-            "lights" : false
+            "lights" : false,
+            "lightsControl" : false
         }
     ]
 }

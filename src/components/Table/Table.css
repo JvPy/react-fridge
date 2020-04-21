@@ -6,7 +6,7 @@ table {
   
 table td, table th {
     /* border: 1px solid #ddd; */
-    padding: 8px;
+    padding: 16px;
 }
   
 table tr:nth-child(even){background-color: #f2f2f2;}
@@ -19,4 +19,19 @@ table th {
     text-align: left;
     background-color: #7258A9;
     color: white;
+}
+
+button {
+    border: 1px solid #7258A9;
+    border-radius: 4px;
+    background-color: #7258A9;
+    color: white;
+    transition: ease 0.5s;
+    padding: 16px;
+}
+
+button:hover {
+    background-color: white;
+    color: #7258A9;
+    transition: ease 0.5s;
 }

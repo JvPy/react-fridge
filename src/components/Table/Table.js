@@ -4,15 +4,13 @@ import "./Table.css";
 const tableContent = require('../../messages/plants.json');
 const tableHeader = require('../../messages/header.json');
 
-console.log(tableHeader)
-
 const handleTableData = () => {
-    return tableContent.plants.map((x,i) =>
-        <tr key={i}>
+    return tableContent.plants.map(x =>
+        <tr key={x.id}>
             <td>{x.plant}</td>
             <td>{x.lights ? "On" : "Off"}</td>
             <td>{x.humidity}%</td>
-            <td>x</td>
+            <td>{x.lightsControl ? x.lightsControl.lightsOn + " - " + x.lightsControl.lightsOff  : "Off"}</td>
         </tr>
     )
 }
@@ -23,7 +21,7 @@ const handleTableHeader = () => {
             <th>{tableHeader.plant}</th>
             <th>{tableHeader.lights}</th>
             <th>{tableHeader.humidity}</th>
-            <th>x</th>
+            <th>{tableHeader.lightControl}</th>
         </tr>
     )
 }
@@ -31,16 +29,19 @@ const handleTableHeader = () => {
 const Table = () => {
     handleTableData();
     return (
-      <Card>
-          <table>
+        <Card>
+            <table>
                 <thead>
                     {handleTableHeader()}
                 </thead>
                 <tbody>
                     {handleTableData()}
                 </tbody>
-          </table>
-      </Card>
+            </table>
+            <div className="flex-row-reverse">
+                <button>Update</button>
+            </div>
+        </Card>
     )
 }
 
